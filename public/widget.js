@@ -246,27 +246,25 @@ React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,o,f,m,f),ue[f+o]=!0)}if(f=null,i!==void 0&&(r(i),f=``+i),c(n)&&(r(n.key),f=``+n.key),`key`in n)for(var h in i={},n)h!==`key`&&(i[h]=n[h]);else i=n;return f&&l(i,typeof e==`function`?e.displayName||e.name||`Unknown`:e),d(e,f,i,a(),s,u)}function p(e){m(e)?e._store&&(e._store.validated=1):typeof e==`object`&&e&&e.$$typeof===ie&&(e._payload.status===`fulfilled`?m(e._payload.value)&&e._payload.value._store&&(e._payload.value._store.validated=1):e._store&&(e._store.validated=1))}function m(e){return typeof e==`object`&&!!e&&e.$$typeof===g}var h=o(),g=Symbol.for(`react.transitional.element`),_=Symbol.for(`react.portal`),v=Symbol.for(`react.fragment`),y=Symbol.for(`react.strict_mode`),b=Symbol.for(`react.profiler`),x=Symbol.for(`react.consumer`),ee=Symbol.for(`react.context`),te=Symbol.for(`react.forward_ref`),S=Symbol.for(`react.suspense`),ne=Symbol.for(`react.suspense_list`),re=Symbol.for(`react.memo`),ie=Symbol.for(`react.lazy`),C=Symbol.for(`react.activity`),ae=Symbol.for(`react.client.reference`),w=h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,oe=Object.prototype.hasOwnProperty,se=Array.isArray,T=console.createTask?console.createTask:function(){return null};h={react_stack_bottom_frame:function(e){return e()}};var ce,le={},E=h.react_stack_bottom_frame.bind(h,s)(),D=T(i(s)),ue={};e.Fragment=v,e.jsx=function(e,t,n){var r=1e4>w.recentlyCreatedOwnerStacks++;return f(e,t,n,!1,r?Error(`react-stack-top-frame`):E,r?T(i(e)):D)},e.jsxs=function(e,t,n){var r=1e4>w.recentlyCreatedOwnerStacks++;return f(e,t,n,!0,r?Error(`react-stack-top-frame`):E,r?T(i(e)):D)}})()})),h=e(((e,t)=>{process.env.NODE_ENV===`production`?t.exports=p():t.exports=m()})),g=f(),_=o(),v=h(),y=`https://lead-qualifier-backend-production.up.railway.app`,b=[{key:`intro`,type:`bot`,text:`Hey! 👋 I'm the PropelForge assistant. I'll ask you a few quick questions to see how we can help. What's your name?`},{key:`name`,type:`input`,placeholder:`Your full name`,field:`name`},{key:`q1`,type:`bot`,text:e=>`Nice to meet you, ${e}! What's your email address?`},{key:`email`,type:`input`,placeholder:`your@email.com`,field:`email`,inputType:`email`},{key:`q2`,type:`bot`,text:`Got it. What company are you with? (or skip)`},{key:`company`,type:`input`,placeholder:`Company name (optional)`,field:`company`,optional:!0},{key:`q3`,type:`bot`,text:`What does your business do?`},{key:`a1`,type:`input`,placeholder:`Describe your business...`,field:`ans_business`,answer:!0},{key:`q4`,type:`bot`,text:`What tasks are eating the most of your team's time right now?`},{key:`a2`,type:`input`,placeholder:`e.g. follow-ups, scheduling, data entry...`,field:`ans_tasks`,answer:!0},{key:`q5`,type:`bot`,text:`What tools do you currently use? (CRM, email, calendar, etc.)`},{key:`a3`,type:`input`,placeholder:`e.g. HubSpot, Gmail, Google Sheets...`,field:`ans_tools`,answer:!0},{key:`q6`,type:`bot`,text:`Last one — what's your biggest goal for the next 6 months?`},{key:`a4`,type:`input`,placeholder:`e.g. scale without hiring, save 10hrs/week...`,field:`ans_goal`,answer:!0}],x=`
   #pf-widget-btn {
-    position: fixed; bottom: 120px; right: -48px; z-index: 999999;
-    width: 130px; height: 44px; border-radius: 10px 10px 0 0;
+    position: fixed; bottom: 24px; right: 24px; z-index: 999999;
+    height: 52px; padding: 0 20px; border-radius: 999px;
     background: #3B82F6; border: none; cursor: pointer;
-    box-shadow: -4px -2px 20px rgba(59,130,246,0.4);
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    transition: right 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s;
-    transform: rotate(-90deg);
-    transform-origin: right center;
+    box-shadow: 0 4px 24px rgba(59,130,246,0.5);
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
     animation: pf-idle 3s ease-in-out infinite;
-    color: #fff; font-size: 13px; font-weight: 600;
+    color: #fff; font-size: 15px; font-weight: 600;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    letter-spacing: 0.02em;
+    white-space: nowrap;
   }
   #pf-widget-btn:hover {
-    right: -40px;
-    box-shadow: -6px -2px 28px rgba(59,130,246,0.6);
+    transform: scale(1.05);
+    box-shadow: 0 6px 32px rgba(59,130,246,0.65);
     animation: none;
   }
   @keyframes pf-idle {
-    0%,100% { box-shadow: -4px -2px 20px rgba(59,130,246,0.35); }
-    50%      { box-shadow: -4px -2px 32px rgba(59,130,246,0.65); }
+    0%,100% { box-shadow: 0 4px 24px rgba(59,130,246,0.4); }
+    50%      { box-shadow: 0 4px 36px rgba(59,130,246,0.7); }
   }
   #pf-widget-panel {
     position: fixed; bottom: 92px; right: 24px; z-index: 999998;
