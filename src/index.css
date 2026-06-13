@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg: 244 246 249;
+  --color-surface: 255 255 255;
+  --color-divider: 228 232 239;
+  --color-ink: 15 23 42;
+  --color-muted: 100 116 139;
+}
+
+.dark {
+  --color-bg: 13 13 15;
+  --color-surface: 22 22 26;
+  --color-divider: 255 255 255;
+  --color-ink: 255 255 255;
+  --color-muted: 148 163 184;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: rgb(var(--color-bg)); color: rgb(var(--color-ink)); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.card-hover {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 4px 24px rgba(15,23,42,0.08);
+  transform: translateY(-1px);
+}
+
+@keyframes idle-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.06), 0 0 20px rgba(59, 130, 246, 0.03);
+    border-color: rgba(59, 130, 246, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(59, 130, 246, 0.14), 0 0 40px rgba(59, 130, 246, 0.07);
+    border-color: rgba(59, 130, 246, 0.22);
+  }
+}
+
+/* Dark mode: slow idle glow on all cards */
+.dark .card-hover {
+  animation: idle-glow 4s ease-in-out infinite;
+}
+.dark .card-hover:hover {
+  animation: none;
+  border-color: rgba(59, 130, 246, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.22),
+    0 0 24px rgba(59, 130, 246, 0.22),
+    0 0 70px rgba(59, 130, 246, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 50%, #3b82f6 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
